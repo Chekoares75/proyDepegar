@@ -9,4 +9,5 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @CucumberOptions(features="src/test/resources/features/principal.feature", glue= {"tcs.semillero.diego.proyDespegar.definitions"})
 public class RunnerConfiguracionVuelo {
 
+	
 }
