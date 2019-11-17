@@ -12,19 +12,18 @@ public class StepConfigurarVuelo {
 	}
 
 	@Step
-	public void configurar_datos_basicos_del_vuelo(String ciudadOrigen, String ciudadDestino, String fechaIda, String fechaVuelta, int adultos, int infantes, String checkFecha) throws Exception {
+	public void configurar_datos_basicos_del_vuelo(String ciudadOrigen, String ciudadDestino, String fechaIda, String fechaVuelta, int adultos, int infantes, String checkFecha, String claseVuelo) throws Exception {
 		objPageConfigurarVuelo.getBtnLinkVuelos().click();
 		Thread.sleep(2000);
+		objPageConfigurarVuelo.getBtnSoloIda().click();
 		objPageConfigurarVuelo.elegirCiudadOrigen(ciudadOrigen);
 		objPageConfigurarVuelo.elegirCiudadDestino(ciudadDestino);
 		objPageConfigurarVuelo.getBtnHabitacionesPersonas().click();
 		objPageConfigurarVuelo.verificarCantidadPersonas(adultos, infantes);
 		objPageConfigurarVuelo.seleccionarEdadInfantes(infantes);
-		objPageConfigurarVuelo.seleccionarClaseVuelo(ciudadOrigen);
-		Thread.sleep(10000);
-		objPageConfigurarVuelo.getBtnConfirmarCantidadPersonas().click();
+		objPageConfigurarVuelo.seleccionarClaseVuelo(claseVuelo);
+		objPageConfigurarVuelo.getBtnAplicar().click();
 		objPageConfigurarVuelo.verificarCheckFechas(checkFecha, fechaIda, fechaVuelta);
-		
 	}
 
 	@Step

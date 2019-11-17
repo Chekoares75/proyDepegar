@@ -23,10 +23,10 @@ Feature: Automatización de prueba de página despegar
   @tag1
   Scenario Outline: Configuracion de datos basicos para la busqueda
     Given Ingreso al navegador y a la pagina web
-    When configurar datos basicos del vuelo <ciudadOrigen> <ciudadDestino> <fechaIda> <fechaVuelta> <adultos> <infantes> <checkFecha> 
+    When configurar datos basicos del vuelo <ciudadOrigen> <ciudadDestino> <fechaIda> <fechaVuelta> <adultos> <infantes> <checkFecha> <claseVuelo>
     Then enviar datos
   
 		Examples: 
-      | ciudadOrigen  | ciudadDestino | fechaIda  | fechaVuelta  | adultos | infantes  | checkFecha  |
-      | "Bog" | "Lon" | "10/01/2020" |"19/12/2019"| 2 | 3 | "si" | 
+      | ciudadOrigen  | ciudadDestino | fechaIda  | fechaVuelta  | adultos | infantes  | checkFecha  | claseVuelo  |
+      | "Bog" | "Lon" | "10/01/2020" |"19/12/2019"| 2 | 3 | "si" | "Primera clase" | 
       

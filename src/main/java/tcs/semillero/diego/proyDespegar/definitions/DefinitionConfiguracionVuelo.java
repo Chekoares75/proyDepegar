@@ -15,11 +15,10 @@ public class DefinitionConfiguracionVuelo {
 	public void ingreso_al_navegador_y_a_la_pagina_web() throws Exception {
 		objStepConfigurarVuelo.ingreso_al_navegador_y_a_la_pagina_web();
 	}
-
-	@When("^configurar datos basicos del vuelo \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" (\\d+) (\\d+) \"([^\"]*)\"$")
-	public void configurar_datos_basicos_del_vuelo(String ciudadOrigen, String ciudadDestino, String fechaIda, String fechaVuelta, int adultos, int infantes, String checkFecha) throws Exception {
-		objStepConfigurarVuelo.configurar_datos_basicos_del_vuelo(ciudadOrigen, ciudadDestino, fechaIda, fechaVuelta, adultos, infantes, checkFecha);
-
+	
+	@When("^configurar datos basicos del vuelo \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" (\\d+) (\\d+) \"([^\"]*)\" (.*)$")
+	public void configurar_datos_basicos_del_vuelo(String ciudadOrigen, String ciudadDestino, String fechaIda, String fechaVuelta, int adultos, int infantes, String checkFecha, String claseVuelo) throws Exception {
+		objStepConfigurarVuelo.configurar_datos_basicos_del_vuelo(ciudadOrigen, ciudadDestino, fechaIda, fechaVuelta, adultos, infantes, checkFecha, claseVuelo);
 	}
 
 	@Then("^enviar datos$")

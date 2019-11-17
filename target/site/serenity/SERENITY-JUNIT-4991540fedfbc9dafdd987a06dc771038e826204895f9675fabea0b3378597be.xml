@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Automatización de prueba de página despegar" skipped="0" tests="1" time="64.35" timestamp="2019-11-16T20:18:10.941-05:00[America/Bogota]"><testcase name="Configuracion de datos basicos para la busqueda"><failure message="The following error occurred: Expected enabled element was not enabled&#10;Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'&#10;System info: host: 'CHEKO-MVL', ip: '192.168.39.124', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">The following error occurred: Expected enabled element was not enabled
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'CHEKO-MVL', ip: '192.168.39.124', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: driver.version: unknown</failure><system-err>The following error occurred: Expected enabled element was not enabled
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: 'CHEKO-MVL', ip: '192.168.39.124', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_181'
-Driver info: driver.version: unknown&#13;
-tcs.semillero.diego.proyDespegar.steps.StepConfigurarVuelo.configurar_datos_basicos_del_vuelo(StepConfigurarVuelo.java:24)&#13;
-tcs.semillero.diego.proyDespegar.definitions.DefinitionConfiguracionVuelo.configurar_datos_basicos_del_vuelo(DefinitionConfiguracionVuelo.java:21)&#13;
-cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
-org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
-org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
-org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
-org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
-org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
-org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Automatización de prueba de página despegar" skipped="0" tests="1" time="26.12" timestamp="2019-11-16T21:22:02.504-05:00[America/Bogota]"><testcase name="Configuracion de datos basicos para la busqueda"/></testsuite>
