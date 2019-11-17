@@ -44,7 +44,7 @@
     <div id="topbanner">
         <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
         <div id="projectname-banner" style="float:right">
-            <span class="projectname">Automatización página web "Despegar.com"</span>
+            <span class="projectname">Automatización página web Despegar.com</span>
         </div>
     </div>
 </div>
@@ -77,7 +77,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 16-11-2019 13:11</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 16-11-2019 21:22</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -124,9 +124,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-square-o pending-icon fa-2x' title='PENDING'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-2x' title='SUCCESS'></i></span>
                             <span class="test-case-title">
-                                    <span class="pending-color">
+                                    <span class="success-color">
                                     Configuracion de datos basicos para la busqueda
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -140,9 +140,55 @@
 
     <div class="clr"></div>
 
+    <div class="story-title">
+        <h3 class="story-header">Scenario Outline</h3>
+
+        <div class="scenario">Given Ingreso al navegador y a la pagina web<br>When configurar datos basicos del vuelo &lt;ciudadOrigen&gt; &lt;ciudadDestino&gt; &lt;fechaIda&gt; &lt;fechaVuelta&gt; &lt;adultos&gt; &lt;infantes&gt; &lt;checkFecha&gt; &lt;claseVuelo&gt;<br>Then enviar datos</div>
+
+    </div>
 
     <div id="beforetable"></div>
 
+
+        <h3 class="story-header">Examples:</h3>
+        <div class="example-table">
+            <table>
+                <thead>
+                <tr>
+                    <th>#</th>
+                        <th>Ciudadorigen</th>
+                        <th>Ciudaddestino</th>
+                        <th>Fechaida</th>
+                        <th>Fechavuelta</th>
+                        <th>Adultos</th>
+                        <th>Infantes</th>
+                        <th>Checkfecha</th>
+                        <th>Clasevuelo</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="test-SUCCESS"><a href="#0">1</a></td>
+                            <td class="test-SUCCESS"><a href="#0">"Bog"</a>
+                            </td>
+                            <td class="test-SUCCESS"><a href="#0">"Lon"</a>
+                            </td>
+                            <td class="test-SUCCESS"><a href="#0">"10/01/2020"</a>
+                            </td>
+                            <td class="test-SUCCESS"><a href="#0">"19/12/2019"</a>
+                            </td>
+                            <td class="test-SUCCESS"><a href="#0">2</a>
+                            </td>
+                            <td class="test-SUCCESS"><a href="#0">3</a>
+                            </td>
+                            <td class="test-SUCCESS"><a href="#0">"si"</a>
+                            </td>
+                            <td class="test-SUCCESS"><a href="#0">"Primera clase"</a>
+                            </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
     <div id="tablecontents">
         <div>
@@ -151,70 +197,192 @@
                     <th width="65">                        &nbsp;
                     </th>
 
-                    <th width="%" class="step-description-wide-column greentext">
+                    <th width="%" class="step-description-column greentext">
                         Steps
                     </th>
+                    <th width="120" class="greentext">Screenshot</th>
                     <th width="100" class="greentext">Outcome</th>
                     <th width="75" class="greentext">Duration</th>
                 </tr>
                 <tr class="step-table-separator">
                     <td colspan="5"></td>
                 </tr>
-                <tr class="test-PENDING">
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
                         <a name="0"/>
-                            <span style="margin-left: 20px; margin-right: 5px;"
-                                  class="top-level-icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block">
+                                <i class="fa fa-plus-square-o imgstepSection0 success-icon"
+                                   style="margin-left: 20px; float:left;  padding-right:5px"></i>
+                            </a>
                     </td>
                     <td>
                         <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
+                               style="display:block;">
                             <span class="top-level-step">
+                                Configuracion de datos basicos para la busqueda #1: {ciudadOrigen="Bog", ciudadDestino="Lon", fechaIda="10/01/2020", fechaVuelta="19/12/2019", adultos=2, infantes=3, checkFecha="si", claseVuelo="Primera clase"}
+                            </span>
+                            </a>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="4991540fedfbc9dafdd987a06dc771038e826204895f9675fabea0b3378597be_screenshots.html#screenshots?screenshot=0">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="29f8e87f63d6e979e91e2ad6a6f8839707720b50290a127318867b933849c677.png"
+                                         href="29f8e87f63d6e979e91e2ad6a6f8839707720b50290a127318867b933849c677.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">24.8s</span></td>
+                </tr>
+                    <tr>
+                    <td colspan="5">
+                    <table id="stepSection0" style="display:none; width:100%">
+
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-step">
                                 Given Ingreso al navegador y a la pagina web
                             </span>
 
                         </div>
                     </td>
-                    <td width="100"><span class="top-level-step">PENDING</span></td>
-                    <td width="100"><span class="top-level-step">0s</span></td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="4991540fedfbc9dafdd987a06dc771038e826204895f9675fabea0b3378597be_screenshots.html#screenshots?screenshot=1">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="4d03fbb9c4670c577b3983f3afa8a52b96ddf890ea18e396041cd8548b6814dc.png"
+                                         href="4d03fbb9c4670c577b3983f3afa8a52b96ddf890ea18e396041cd8548b6814dc.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">16.38s</span></td>
                 </tr>
-                <tr class="test-PENDING">
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
-                        <a name="1"/>
-                            <span style="margin-left: 20px; margin-right: 5px;"
-                                  class="top-level-icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        
+                            <span style="margin-left: 60px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
-                            <span class="top-level-step">
-                                When configurar datos basicos del vuelo &lt;ciudadOrigen&gt;&lt;ciudadDestino&gt;&lt;fechaIda&gt;&lt;fechaVuelta&gt;&lt;adultos&gt;&lt;infantes&gt;&lt;checkFecha&gt;
+                            <span class="nested-group-step">
+                                Ingreso al navegador y a la pagina web
                             </span>
 
                         </div>
                     </td>
-                    <td width="100"><span class="top-level-step">PENDING</span></td>
-                    <td width="100"><span class="top-level-step">0s</span></td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="4991540fedfbc9dafdd987a06dc771038e826204895f9675fabea0b3378597be_screenshots.html#screenshots?screenshot=2">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="4d03fbb9c4670c577b3983f3afa8a52b96ddf890ea18e396041cd8548b6814dc.png"
+                                         href="4d03fbb9c4670c577b3983f3afa8a52b96ddf890ea18e396041cd8548b6814dc.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">15.77s</span></td>
                 </tr>
-                <tr class="test-PENDING">
+
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
-                        <a name="2"/>
-                            <span style="margin-left: 20px; margin-right: 5px;"
-                                  class="top-level-icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
-                            <span class="top-level-step">
+                            <span class="nested-step">
+                                When configurar datos basicos del vuelo "Bog" "Lon" "10/01/2020" "19/12/2019" 2 3 "si" "Primera clase"
+                            </span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="4991540fedfbc9dafdd987a06dc771038e826204895f9675fabea0b3378597be_screenshots.html#screenshots?screenshot=3">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="4d03fbb9c4670c577b3983f3afa8a52b96ddf890ea18e396041cd8548b6814dc.png"
+                                         href="4d03fbb9c4670c577b3983f3afa8a52b96ddf890ea18e396041cd8548b6814dc.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">7.24s</span></td>
+                </tr>
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 60px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">
+                                Configurar datos basicos del vuelo: Bog, Lon, 10/01/2020, 19/12/2019, 2, 3, si, "Primera clase"
+                            </span>
+
+                        </div>
+                    </td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="4991540fedfbc9dafdd987a06dc771038e826204895f9675fabea0b3378597be_screenshots.html#screenshots?screenshot=5">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="4d03fbb9c4670c577b3983f3afa8a52b96ddf890ea18e396041cd8548b6814dc.png"
+                                         href="4d03fbb9c4670c577b3983f3afa8a52b96ddf890ea18e396041cd8548b6814dc.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">6.52s</span></td>
+                </tr>
+
+                <tr class="test-SUCCESS">
+                    <td width="60" class="step-icon">
+                        
+                            <span style="margin-left: 40px; margin-right: 5px;"
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                    </td>
+                    <td>
+                        <div class="step-description">
+                            <span class="nested-group-step">
                                 Then enviar datos
                             </span>
 
                         </div>
                     </td>
-                    <td width="100"><span class="top-level-step">PENDING</span></td>
-                    <td width="100"><span class="top-level-step">0s</span></td>
+                        <td width="100" class="SUCCESS-text">
+                                <a href="4991540fedfbc9dafdd987a06dc771038e826204895f9675fabea0b3378597be_screenshots.html#screenshots?screenshot=7">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="29f8e87f63d6e979e91e2ad6a6f8839707720b50290a127318867b933849c677.png"
+                                         href="29f8e87f63d6e979e91e2ad6a6f8839707720b50290a127318867b933849c677.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">0.76s</span></td>
                 </tr>
-                <tr class="test-PENDING">
-                    <td colspan="2"></td>
-                    <td width="100"><span class="top-level-step"><em>PENDING</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>0.28s</em></span></td>
+
+                    </table>
+                    </td>
+                    <tr>
+                <tr class="test-SUCCESS">
+                    <td colspan="3"></td>
+                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>26.12s</em></span></td>
                 </tr>
 
             </table>

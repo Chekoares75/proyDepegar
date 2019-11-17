@@ -21,17 +21,12 @@ Feature: Automatización de prueba de página despegar
   proyecto de semillero
 
   @tag1
-  Scenario: Configuracion de datos basicos para la busqueda
+  Scenario Outline: Configuracion de datos basicos para la busqueda
     Given Ingreso al navegador y a la pagina web
-    When configurar datos basicos del vuelo <ciudadOrigen><ciudadDestino><fechaIda><fechaVuelta><adultos><infantes><checkFecha>
+    When configurar datos basicos del vuelo <ciudadOrigen> <ciudadDestino> <fechaIda> <fechaVuelta> <adultos> <infantes> <checkFecha> <claseVuelo>
     Then enviar datos
-  @tag2
-  Scenario Outline: Automatizacion caso de prueba 3
-    Given Configuracion de datos basicos del vuelo
-    When buscar el precio mas alto
-    Then seleccionar el precio mas alto
-
-    Examples: 
-      | ciudadOrigen  | ciudadDestino | fechaIda  | fechaVuelta  | adultos | infantes  | checkFecha  |
-      | "Bog" | "Lon" | "10/12/2019" |"19/12/1990"| 2 | 3 | "no" | 
+  
+		Examples: 
+      | ciudadOrigen  | ciudadDestino | fechaIda  | fechaVuelta  | adultos | infantes  | checkFecha  | claseVuelo  |
+      | "Bog" | "Lon" | "10/01/2020" |"19/12/2019"| 2 | 3 | "si" | "Primera clase" | 
       
