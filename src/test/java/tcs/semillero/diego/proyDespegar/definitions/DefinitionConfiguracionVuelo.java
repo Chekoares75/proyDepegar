@@ -23,6 +23,6 @@ public class DefinitionConfiguracionVuelo {
 
 	@Then("^enviar datos$")
 	public void enviar_datos() throws Exception {
-
+		objStepConfigurarVuelo.enviar_datos();
 	}
 }

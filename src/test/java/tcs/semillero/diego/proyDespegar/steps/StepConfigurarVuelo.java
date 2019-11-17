@@ -28,7 +28,9 @@ public class StepConfigurarVuelo {
 
 	@Step
 	public void enviar_datos() throws Exception {
-		objPageConfigurarVuelo.getBtnBuscar();
-		Thread.sleep(10000);
+		objPageConfigurarVuelo.getBtnBuscar().click();
+		Thread.sleep(2000);
+		objPageConfigurarVuelo.elegirPrecioMasAlto();
+		Thread.sleep(30000);
 	}
 }

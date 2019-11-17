@@ -9,7 +9,8 @@ import net.thucydides.core.annotations.DefaultUrl;
 
 @DefaultUrl("https://www.despegar.com.co")
 public class PageConfigurarVuelo extends PageObject {
-
+	PagePreciosVuelos objPagePreciosVuelos;
+	
 	@FindBy(xpath = "//a[contains(@class,'shifu-3-button-circle FLIGHTS')]//div[@class='button-circle-icon']")
 	WebElementFacade btnLinkVuelos;
 	@FindBy(xpath = "//div[@class='sbox-radio-buttons']//span[2]//label[1]")
@@ -41,16 +42,12 @@ public class PageConfigurarVuelo extends PageObject {
 	@FindBy(xpath = "//div[@class='_pnlpk-main _pnlpk-panel _pnlpk-panel--popup _pnlpk-panel--mobile _pnlpk-panel--show']//a[@class='_pnlpk-apply-button sbox-3-btn-ghost _pnlpk-panel__button--link-right -md'][contains(text(),'Aplicar')]")
 	WebElementFacade btnAplicar;
 
-	@FindBy(xpath = "//a[@class='sbox-3-btn -primary -md sbox-search']")
+	@FindBy(xpath = "//div[@class='sbox-button -ml3-l -mt5-l']//a[@class='sbox-3-btn -primary -md sbox-search']")
 	WebElementFacade btnBuscar;
 	
 	
 	@FindBy(xpath = "//div[contains(@class,'eva-3-nav-slider -white -sm -eva-3-shadow-line-hover airline-matrix-right')]")
 	WebElementFacade btnCambiarPagina;
-	
-	
-	
-	
 	/*
 	 * @FindBy(xpath = ) WebElementFacade txtfPrecioMasAlto;
 	 */
@@ -88,8 +85,12 @@ public class PageConfigurarVuelo extends PageObject {
 
 	public void seleccionarEdadInfantes(int infantes) {
 		for (int contador = 1; contador <= infantes; contador++)
-			find(By.xpath("//div[@class=\"_pnlpk-minors-age-select-wrapper\"]/div[" + contador + "]/div[2]//select"))
-					.selectByVisibleText(recrearEdadaleatoria());
+			/*find(By.xpath("//div[@class=\"_pnlpk-minors-age-select-wrapper\"]/div[" + contador + "]/div[2]//select"))
+					.selectByVisibleText(recrearEdadaleatoria());*/
+			find(By.xpath("//div[@class=\"_pnlpk-minors-age-select-wrapper\"]/div[" + contador + "]/div[2]//select")).selectByVisibleText(edadFija9());
+	}
+	public String edadFija9() {
+		return "9 años";
 	}
 
 	public String recrearEdadaleatoria() {
@@ -103,7 +104,6 @@ public class PageConfigurarVuelo extends PageObject {
 
 	public void seleccionarClaseVuelo(String claseVuelo) {
 		claseVuelo = claseVuelo.substring(1, (claseVuelo.length() - 1));
-		System.out.println(claseVuelo);
 		slctrClaseVuelo.selectByVisibleText(claseVuelo);
 	}
 
@@ -123,13 +123,7 @@ public class PageConfigurarVuelo extends PageObject {
 	}
 	
 	public void elegirPrecioMasAlto() {
-		
-		/*
-		 * if(btnCambiarPagina.isCurrentlyVisible()) btnCambiarPagina.click(); else
-		 * 
-		 * 
-		 * txtfPrecioMasAlto.getText();
-		 */
+		objPagePreciosVuelos.seleccionarPrecioMayor();
 	}
 
 	public void elegirFechaVuelta(String fechaVuelta) {
