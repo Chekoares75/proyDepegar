@@ -21,12 +21,13 @@ Feature: Title of your feature
   I want to use this template for my feature file
 
   @tag1
-  Scenario Outline: Buscar un vuelo para 3 infantes 2 adultos sin decidir fecha validar el precio más alto del vuelo
+  Scenario: Title of your scenario
     Given Ingreso al navegador y a la pagina web
     When configurar datos basicos del vuelo <ciudadOrigen> <ciudadDestino> <fechaIda> <fechaVuelta> <adultos> <infantes> <checkFecha> <claseVuelo>
     And enviar datos
     Then verficar el mayor precio
 
     Examples: 
-      | ciudadOrigen  | ciudadDestino | fechaIda  | fechaVuelta  | adultos | infantes  | checkFecha  | claseVuelo  |
-      | "Bog" | "Lon" | "10/01/2020" |"19/12/2019"| 2 | 3 | "si" | "Primera clase" | 
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |

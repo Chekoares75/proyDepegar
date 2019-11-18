@@ -25,8 +25,7 @@ Feature: Automatización de prueba de página despegar
     Given Ingreso al navegador y a la pagina web
     When configurar datos basicos del vuelo <ciudadOrigen> <ciudadDestino> <fechaIda> <fechaVuelta> <adultos> <infantes> <checkFecha> <claseVuelo>
     Then enviar datos
-  
-		Examples: 
-      | ciudadOrigen  | ciudadDestino | fechaIda  | fechaVuelta  | adultos | infantes  | checkFecha  | claseVuelo  |
-      | "Bog" | "Lon" | "19/12/2019" |"10/01/2020"| 2 | 3 | "no" | "Primera clase" | 
-      
+
+    Examples: 
+      | ciudadOrigen | ciudadDestino | fechaIda     | fechaVuelta  | adultos | infantes | checkFecha | claseVuelo      |
+      | "Bog"        | "Lon"         | "19/12/2019" | "10/01/2020" |       2 |        3 | "no"       | "Primera clase" |

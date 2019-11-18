@@ -12,11 +12,11 @@ public class PagePrecioMasCaro extends PageObject {
 	@FindBy(xpath = "//div[contains(@class,'eva-3-nav-slider -white -sm -eva-3-shadow-line-hover airline-matrix-right')]")
 	WebElementFacade btnSiguienteListadoAereolineas;
 
+	int precioMayorNumero = 0;
 	public void seleccionarPrecioMayor() {
 		String nombreAereolineaMayor = "";
 		String nombreActual = "";
 		String precioActual = "";
-		int precioMayorNumero = 0;
 		int precioActualNumero = 0;
 		while (btnSiguienteListadoAereolineas.isVisible()) {
 			for (int contador = 0; contador < 4; contador++) {
@@ -80,6 +80,9 @@ public class PagePrecioMasCaro extends PageObject {
 		}
 		System.out.println("NOMBRE AEREOLÍNEA: "+nombreAereolineaMayor);
 		System.out.println("VALOR PASAJE MÁS CARO: "+precioMayorNumero);
-		Assert.assertEquals(4482623, precioMayorNumero);
 	}
+	public int getPrecioMayorNumero() {
+		return precioMayorNumero;
+	}
+	
 }
