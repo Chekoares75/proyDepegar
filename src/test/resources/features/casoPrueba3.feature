@@ -21,7 +21,7 @@ Feature: Title of your feature
   I want to use this template for my feature file
 
   @tag1
-  Scenario Outline: Buscar vuelo de ida para 5 personas siendo el pasaje mas caro
+  Scenario Outline: Buscar un vuelo para 3 infantes 2 adultos sin decidir fecha validar el precio más alto del vuelo
     Given Ingreso al navegador y a la pagina web
     When configurar datos basicos del vuelo <ciudadOrigen> <ciudadDestino> <fechaIda> <fechaVuelta> <adultos> <infantes> <checkFecha> <claseVuelo>
     And enviar datos
@@ -29,4 +29,4 @@ Feature: Title of your feature
 
     Examples: 
       | ciudadOrigen  | ciudadDestino | fechaIda  | fechaVuelta  | adultos | infantes  | checkFecha  | claseVuelo  |
-      | "Bog" | "Lon" | "10/01/2020" |"19/12/2019"| 2 | 3 | "no" | "Primera clase" | 
+      | "Bog" | "Lon" | "10/01/2020" |"19/12/2019"| 2 | 3 | "si" | "Primera clase" | 
