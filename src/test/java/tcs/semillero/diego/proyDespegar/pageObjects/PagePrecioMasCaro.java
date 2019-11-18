@@ -7,7 +7,7 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 
-public class PagePreciosVuelos extends PageObject {
+public class PagePrecioMasCaro extends PageObject {
 
 	@FindBy(xpath = "//div[contains(@class,'eva-3-nav-slider -white -sm -eva-3-shadow-line-hover airline-matrix-right')]")
 	WebElementFacade btnSiguienteListadoAereolineas;

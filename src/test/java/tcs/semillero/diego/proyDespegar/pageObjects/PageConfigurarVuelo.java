@@ -9,8 +9,8 @@ import net.thucydides.core.annotations.DefaultUrl;
 
 @DefaultUrl("https://www.despegar.com.co")
 public class PageConfigurarVuelo extends PageObject {
-	PagePreciosVuelos objPagePreciosVuelos;
-	
+	PagePrecioMasCaro objPagePreciosVuelos;
+
 	@FindBy(xpath = "//a[contains(@class,'shifu-3-button-circle FLIGHTS')]//div[@class='button-circle-icon']")
 	WebElementFacade btnLinkVuelos;
 	@FindBy(xpath = "//div[@class='sbox-radio-buttons']//span[2]//label[1]")
@@ -25,12 +25,15 @@ public class PageConfigurarVuelo extends PageObject {
 	@FindBy(xpath = "//li[@class='item -active']")
 	WebElementFacade listSeleccionDestino;
 
-	@FindBy(xpath = "//input[@placeholder='Ida']")
-	WebElementFacade listFechaInicial;
-
 	@FindBy(xpath = "//i[@class='checkbox-check sbox-3-icon-checkmark -mr1 sbox-ui-icon']")
 	WebElementFacade chckFechas;
 
+
+	@FindBy(xpath = "//div[@class='input-container sbox-bind-event-click-start-date']//input[@placeholder='Ida']")
+	WebElementFacade btnCalendarioIda;
+	@FindBy(xpath = "class=\"input-tag sbox-bind-disable-end-date sbox-bind-value-end-date sbox-bind-reference-flight-end-date-input\"")
+	WebElementFacade btnCalendarioVuelta;
+	
 	@FindBy(xpath = "//div[@class='sbox-3-input -md sbox-distri-input sbox-3-validation -top-right sbox-bind-event-click-passengers-input sbox-bind-error-flight-roundtrip-passengers-distribution']//div[@class='input-container']")
 	WebElementFacade btnHabitacionesPersonas;
 	@FindBy(xpath = "//div[@class='_pnlpk-main _pnlpk-panel _pnlpk-panel--popup _pnlpk-panel--mobile _pnlpk-panel--show']//div[@class='_pnlpk-panel-scroll']//div[@class='_pnlpk-panel__blocks']//div[@class='_pnlpk-itemBlock']//div[@class='_pnlpk-itemBlock__itemRows _pnlpk-dynamicContent']//div//div[@class='_pnlpk-itemRow__item _pnlpk-stepper-adults -medium-down-to-lg']//a[@class='steppers-icon-right sbox-3-icon-plus']")
@@ -44,13 +47,10 @@ public class PageConfigurarVuelo extends PageObject {
 
 	@FindBy(xpath = "//div[@class='sbox-button -ml3-l -mt5-l']//a[@class='sbox-3-btn -primary -md sbox-search']")
 	WebElementFacade btnBuscar;
-	
-	
+
 	@FindBy(xpath = "//div[contains(@class,'eva-3-nav-slider -white -sm -eva-3-shadow-line-hover airline-matrix-right')]")
 	WebElementFacade btnCambiarPagina;
-	/*
-	 * @FindBy(xpath = ) WebElementFacade txtfPrecioMasAlto;
-	 */
+
 	public void elegirCiudadOrigen(String ciudadOrigen) {
 		listCiudadOrigen.clear();
 		listCiudadOrigen.click();
@@ -85,10 +85,14 @@ public class PageConfigurarVuelo extends PageObject {
 
 	public void seleccionarEdadInfantes(int infantes) {
 		for (int contador = 1; contador <= infantes; contador++)
-			/*find(By.xpath("//div[@class=\"_pnlpk-minors-age-select-wrapper\"]/div[" + contador + "]/div[2]//select"))
-					.selectByVisibleText(recrearEdadaleatoria());*/
-			find(By.xpath("//div[@class=\"_pnlpk-minors-age-select-wrapper\"]/div[" + contador + "]/div[2]//select")).selectByVisibleText(edadFija9());
+			/*
+			 * find(By.xpath("//div[@class=\"_pnlpk-minors-age-select-wrapper\"]/div[" +
+			 * contador + "]/div[2]//select")) .selectByVisibleText(recrearEdadaleatoria());
+			 */
+			find(By.xpath("//div[@class=\"_pnlpk-minors-age-select-wrapper\"]/div[" + contador + "]/div[2]//select"))
+					.selectByVisibleText(edadFija9());
 	}
+
 	public String edadFija9() {
 		return "9 años";
 	}
@@ -110,24 +114,32 @@ public class PageConfigurarVuelo extends PageObject {
 	public void verificarCheckFechas(String checkFecha, String fechaIda, String fechaVuelta) {
 		if (checkFecha.equalsIgnoreCase("SI"))
 			chckFechas.click();
+		else {
+			elegirFechaIda(fechaIda);
+			elegirFechaVuelta(fechaVuelta);
+		}
 	}
 
 	public void elegirFechaIda(String fechaIda) {
-		listFechaInicial.click();
+		btnCalendarioIda.click();
 		String fecha[] = fechaIda.split("/");
 		String fechaInicial = fecha[2] + "-" + fecha[1];
-		find(By.xpath("//div[@data-month=\"" + fechaInicial + "\"]"));
-		find(By.xpath(
-				"//div[@class='_dpmg2--wrapper _dpmg2--roundtrip _dpmg2--show-info _dpmg2--show']//div[@class='_dpmg2--month _dpmg2--o-5 _dpmg2--month-active']//span[@class='_dpmg2--date-number'][contains(text(),'"
-						+ fecha[0] + "')]")).click();
-	}
-	
-	public void elegirPrecioMasAlto() {
-		objPagePreciosVuelos.seleccionarPrecioMayor();
+		
+		WebElementFacade listFechaInicial = find(By.xpath("//div[@data-month=\""+fechaInicial+"\"]/div[4]/span["+fecha[0]+"]"));
+		listFechaInicial.click();
 	}
 
 	public void elegirFechaVuelta(String fechaVuelta) {
+		btnCalendarioVuelta.click();
+		String fecha[] = fechaVuelta.split("/");
+		String fechaRegreso = fecha[2] + "-" + fecha[1];
+		System.out.println("ESTA ES LA FECHA DE VUELTA: "+fechaVuelta);
+		WebElementFacade listFechaFinal = find(By.xpath("//div[@data-month=\""+fechaRegreso+"\"]/div[4]/span["+fecha[0]+"]"));
+		listFechaFinal.click();
+	}
 
+	public void elegirPrecioMasAlto() {
+		objPagePreciosVuelos.seleccionarPrecioMayor();
 	}
 
 	// DE AQUÍ HASTA EL FINAL SOLO SON GETTERS AND SETTERS

@@ -28,5 +28,5 @@ Feature: Automatización de prueba de página despegar
   
 		Examples: 
       | ciudadOrigen  | ciudadDestino | fechaIda  | fechaVuelta  | adultos | infantes  | checkFecha  | claseVuelo  |
-      | "Bog" | "Lon" | "10/01/2020" |"19/12/2019"| 2 | 3 | "si" | "Primera clase" | 
+      | "Bog" | "Lon" | "19/12/2019" |"10/01/2020"| 2 | 3 | "no" | "Primera clase" | 
       
