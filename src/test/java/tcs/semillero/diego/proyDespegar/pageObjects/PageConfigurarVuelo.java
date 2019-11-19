@@ -139,7 +139,6 @@ public class PageConfigurarVuelo extends PageObject {
 	}
 
 	public void elegirFechaVuelta(String fechaVuelta) {
-		btnCalendarioVuelta.click();
 		String fecha[] = fechaVuelta.split("/");
 		String fechaRegreso = fecha[2] + "-" + fecha[1];
 		System.out.println("ESTA ES LA FECHA DE VUELTA: "+fechaVuelta);
