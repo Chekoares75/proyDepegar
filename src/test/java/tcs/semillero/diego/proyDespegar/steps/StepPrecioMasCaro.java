@@ -14,6 +14,7 @@ public class StepPrecioMasCaro {
 
 	@Step
 	public void verficar_el_mayor_precio() throws Exception {
+		Thread.sleep(5000);
 		objPagePrecioMasCaro.seleccionarPrecioMayor();
 		Assert.assertEquals(4482623, objPagePrecioMasCaro.getPrecioMayorNumero());
 	}
