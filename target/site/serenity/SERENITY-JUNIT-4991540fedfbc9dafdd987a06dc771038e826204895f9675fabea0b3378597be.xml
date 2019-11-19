@@ -1,23 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Automatización de prueba de página despegar" skipped="0" tests="1" time="48.35" timestamp="2019-11-19T08:57:46.342-05:00[America/Bogota]"><testcase name="Configuracion de datos basicos para la busqueda"><error message="The following error occurred: Cannot locate element with text: rimera clas&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'&#10;System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'&#10;Driver info: driver.version: unknown&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'&#10;System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException">The following error occurred: Cannot locate element with text: rimera clas
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Automatización de prueba de página despegar" skipped="0" tests="1" time="82.32" timestamp="2019-11-19T14:14:53.949-05:00[America/Bogota]"><testcase name="Configuracion de datos basicos para la busqueda"><failure message="The following error occurred: Expected enabled element was not enabled&#10;Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'&#10;System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">The following error occurred: Expected enabled element was not enabled
 Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
 System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
-Driver info: driver.version: unknown
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
-Driver info: driver.version: unknown</error><system-err>The following error occurred: Cannot locate element with text: rimera clas
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
-System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
-Driver info: driver.version: unknown
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Driver info: driver.version: unknown</failure><system-err>The following error occurred: Expected enabled element was not enabled
 Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
 System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
 Driver info: driver.version: unknown&#13;
-tcs.semillero.diego.proyDespegar.pageObjects.PageConfigurarVuelo.seleccionarClaseVuelo(PageConfigurarVuelo.java:120)&#13;
-tcs.semillero.diego.proyDespegar.steps.StepConfigurarVuelo.configurar_datos_basicos_del_vuelo(StepConfigurarVuelo.java:24)&#13;
-tcs.semillero.diego.proyDespegar.definitions.DefinitionConfiguracionVuelo.configurar_datos_basicos_del_vuelo(DefinitionConfiguracionVuelo.java:22)&#13;
+tcs.semillero.diego.proyDespegar.steps.StepConfigurarVuelo.configurar_datos_basicos_del_vuelo(StepConfigurarVuelo.java:19)&#13;
+tcs.semillero.diego.proyDespegar.definitions.DefinitionConfiguracionVuelo.configurar_datos_basicos_del_vuelo(DefinitionConfiguracionVuelo.java:23)&#13;
 cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
 org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
 org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;

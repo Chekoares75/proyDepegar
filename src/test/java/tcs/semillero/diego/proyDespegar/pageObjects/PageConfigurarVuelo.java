@@ -9,13 +9,13 @@ import net.thucydides.core.annotations.DefaultUrl;
 
 @DefaultUrl("https://www.despegar.com.co")
 public class PageConfigurarVuelo extends PageObject {
-	PagePrecioMasCaro objPagePreciosVuelos;
+	PagePrecios objPagePreciosVuelos;
 
 	@FindBy(xpath = "//a[contains(@class,'shifu-3-button-circle FLIGHTS')]//div[@class='button-circle-icon']")
 	WebElementFacade btnLinkVuelos;
 	@FindBy(xpath = "//div[@class='sbox-radio-buttons']//span[2]//label[1]")
 	WebElementFacade btnSoloIda;
-	
+
 	@FindBy(xpath = "//span[@class='sbox-3-radio -md sbox-radio-button']//label[@class='radio-label-container']")
 	WebElementFacade btnIdaVuelta;
 
@@ -31,12 +31,11 @@ public class PageConfigurarVuelo extends PageObject {
 	@FindBy(xpath = "//i[@class='checkbox-check sbox-3-icon-checkmark -mr1 sbox-ui-icon']")
 	WebElementFacade chckFechas;
 
-
 	@FindBy(xpath = "//div[@class='input-container sbox-bind-event-click-start-date']//input[@placeholder='Ida']")
 	WebElementFacade btnCalendarioIda;
 	@FindBy(xpath = "class=\"input-tag sbox-bind-disable-end-date sbox-bind-value-end-date sbox-bind-reference-flight-end-date-input\"")
 	WebElementFacade btnCalendarioVuelta;
-	
+
 	@FindBy(xpath = "//div[@class='sbox-3-input -md sbox-distri-input sbox-3-validation -top-right sbox-bind-event-click-passengers-input sbox-bind-error-flight-roundtrip-passengers-distribution']//div[@class='input-container']")
 	WebElementFacade btnHabitacionesPersonas;
 	@FindBy(xpath = "//div[@class='_pnlpk-main _pnlpk-panel _pnlpk-panel--popup _pnlpk-panel--mobile _pnlpk-panel--show']//div[@class='_pnlpk-panel-scroll']//div[@class='_pnlpk-panel__blocks']//div[@class='_pnlpk-itemBlock']//div[@class='_pnlpk-itemBlock__itemRows _pnlpk-dynamicContent']//div//div[@class='_pnlpk-itemRow__item _pnlpk-stepper-adults -medium-down-to-lg']//a[@class='steppers-icon-right sbox-3-icon-plus']")
@@ -67,11 +66,21 @@ public class PageConfigurarVuelo extends PageObject {
 		listCiudadDestino.sendKeys(ciudadDestino);
 		listSeleccionDestino.click();
 	}
-	public void elegirTipoVuelo(String tipoVuelo){
-		if(tipoVuelo.equalsIgnoreCase("ida"))
+
+	public void elegirTipoVuelo(String tipoVuelo, String fechaIda, String fechaVuelta) {
+		if (tipoVuelo.equalsIgnoreCase("ida")) {
 			btnSoloIda.click();
-		else
-			btnIdaVuelta.click();
+			elegirFechaIda(fechaIda);
+		}
+		else {
+			elegirFechaIda(fechaIda);
+			elegirFechaVuelta(fechaVuelta);
+		}
+	}
+
+	public void verificarCheckFechas(String checkFecha) {
+		if (checkFecha.equalsIgnoreCase("SI"))
+			chckFechas.click();
 	}
 
 	public void verificarCantidadPersonas(int adultos, int infantes) {
@@ -116,33 +125,24 @@ public class PageConfigurarVuelo extends PageObject {
 	}
 
 	public void seleccionarClaseVuelo(String claseVuelo) {
-		//claseVuelo = claseVuelo.substring(1, (claseVuelo.length() - 1));
+		// claseVuelo = claseVuelo.substring(1, (claseVuelo.length() - 1));
 		slctrClaseVuelo.selectByVisibleText(claseVuelo);
-	}
-
-	public void verificarCheckFechas(String checkFecha, String fechaIda, String fechaVuelta) {
-		if (checkFecha.equalsIgnoreCase("SI"))
-			chckFechas.click();
-		else {
-			elegirFechaIda(fechaIda);
-			elegirFechaVuelta(fechaVuelta);
-		}
 	}
 
 	public void elegirFechaIda(String fechaIda) {
 		btnCalendarioIda.click();
 		String fecha[] = fechaIda.split("/");
 		String fechaInicial = fecha[2] + "-" + fecha[1];
-		
-		WebElementFacade listFechaInicial = find(By.xpath("//div[@data-month=\""+fechaInicial+"\"]/div[4]/span["+fecha[0]+"]"));
-		listFechaInicial.click();			
+		WebElementFacade listFechaInicial = find(
+				By.xpath("//div[@data-month=\"" + fechaInicial + "\"]/div[4]/span[" + fecha[0] + "]"));
+		listFechaInicial.click();
 	}
 
 	public void elegirFechaVuelta(String fechaVuelta) {
 		String fecha[] = fechaVuelta.split("/");
 		String fechaRegreso = fecha[2] + "-" + fecha[1];
-		System.out.println("ESTA ES LA FECHA DE VUELTA: "+fechaVuelta);
-		WebElementFacade listFechaFinal = find(By.xpath("//div[@data-month=\""+fechaRegreso+"\"]/div[4]/span["+fecha[0]+"]"));
+		WebElementFacade listFechaFinal = find(
+				By.xpath("//div[@data-month=\"" + fechaRegreso + "\"]/div[4]/span[" + fecha[0] + "]"));
 		listFechaFinal.click();
 	}
 
