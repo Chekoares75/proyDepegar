@@ -8,7 +8,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 public class PagePrecioMasCaro extends PageObject {
-
+					 
 	@FindBy(xpath = "//div[contains(@class,'eva-3-nav-slider -white -sm -eva-3-shadow-line-hover airline-matrix-right')]")
 	WebElementFacade btnSiguienteListadoAereolineas;
 
@@ -18,8 +18,9 @@ public class PagePrecioMasCaro extends PageObject {
 		String nombreActual = "";
 		String precioActual = "";
 		int precioActualNumero = 0;
+		int preciosPorAereolinea=3;
 		while (btnSiguienteListadoAereolineas.isVisible()) {
-			for (int contador = 0; contador < 4; contador++) {
+			for (int contador = 0; contador < preciosPorAereolinea; contador++) {
 				WebElementFacade objListaAereolinea = find(
 						By.xpath("//airlines-matrix-airline[1]//li[" + (contador + 1) + "]"));
 				if (contador == 0)
@@ -49,7 +50,7 @@ public class PagePrecioMasCaro extends PageObject {
 		}
 		if (!btnSiguienteListadoAereolineas.isVisible()) {
 			for (int superContador = 0; superContador < 4; superContador++) {
-				for (int contador = 0; contador < 4; contador++) {
+				for (int contador = 0; contador < preciosPorAereolinea; contador++) {
 					WebElementFacade objListaAereolinea = find(By.xpath(
 							"//airlines-matrix-airline[" + (superContador + 1) + "]//li[" + (contador + 1) + "]"));
 					if (contador == 0)

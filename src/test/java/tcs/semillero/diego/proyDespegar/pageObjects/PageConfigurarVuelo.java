@@ -15,6 +15,9 @@ public class PageConfigurarVuelo extends PageObject {
 	WebElementFacade btnLinkVuelos;
 	@FindBy(xpath = "//div[@class='sbox-radio-buttons']//span[2]//label[1]")
 	WebElementFacade btnSoloIda;
+	
+	@FindBy(xpath = "//span[@class='sbox-3-radio -md sbox-radio-button']//label[@class='radio-label-container']")
+	WebElementFacade btnIdaVuelta;
 
 	@FindBy(xpath = "//div[@class='sbox-3-input -md sbox-3-validation -top-right -icon-left sbox-origin-container places-inline sbox-bind-error-flight-roundtrip-origin-empty']//input[@placeholder='Ingresa desde dónde viajas']")
 	WebElementFacade listCiudadOrigen;
@@ -64,6 +67,12 @@ public class PageConfigurarVuelo extends PageObject {
 		listCiudadDestino.sendKeys(ciudadDestino);
 		listSeleccionDestino.click();
 	}
+	public void elegirTipoVuelo(String tipoVuelo){
+		if(tipoVuelo.equalsIgnoreCase("ida"))
+			btnSoloIda.click();
+		else
+			btnIdaVuelta.click();
+	}
 
 	public void verificarCantidadPersonas(int adultos, int infantes) {
 		if ((adultos + infantes) <= 8) {
@@ -107,7 +116,7 @@ public class PageConfigurarVuelo extends PageObject {
 	}
 
 	public void seleccionarClaseVuelo(String claseVuelo) {
-		claseVuelo = claseVuelo.substring(1, (claseVuelo.length() - 1));
+		//claseVuelo = claseVuelo.substring(1, (claseVuelo.length() - 1));
 		slctrClaseVuelo.selectByVisibleText(claseVuelo);
 	}
 
@@ -126,7 +135,7 @@ public class PageConfigurarVuelo extends PageObject {
 		String fechaInicial = fecha[2] + "-" + fecha[1];
 		
 		WebElementFacade listFechaInicial = find(By.xpath("//div[@data-month=\""+fechaInicial+"\"]/div[4]/span["+fecha[0]+"]"));
-		listFechaInicial.click();
+		listFechaInicial.click();			
 	}
 
 	public void elegirFechaVuelta(String fechaVuelta) {

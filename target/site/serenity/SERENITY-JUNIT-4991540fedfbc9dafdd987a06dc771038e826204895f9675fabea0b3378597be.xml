@@ -1,14 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="2" name="Automatización de prueba de página despegar" skipped="0" tests="2" time="131.82" timestamp="2019-11-18T09:44:44.395-05:00[America/Bogota]"><testcase name="Configuracion de datos basicos para la busqueda"><failure message="The following error occurred: Expected enabled element was not enabled&#10;Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'&#10;System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'&#10;Driver info: driver.version: unknown" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">The following error occurred: Expected enabled element was not enabled
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Automatización de prueba de página despegar" skipped="0" tests="1" time="48.35" timestamp="2019-11-19T08:57:46.342-05:00[America/Bogota]"><testcase name="Configuracion de datos basicos para la busqueda"><error message="The following error occurred: Cannot locate element with text: rimera clas&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'&#10;System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'&#10;Driver info: driver.version: unknown&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'&#10;System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException">The following error occurred: Cannot locate element with text: rimera clas
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
 System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
-Driver info: driver.version: unknown</failure><system-err>The following error occurred: Expected enabled element was not enabled
+Driver info: driver.version: unknown
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
+System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
+Driver info: driver.version: unknown</error><system-err>The following error occurred: Cannot locate element with text: rimera clas
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
+System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
+Driver info: driver.version: unknown
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
 System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'
 Driver info: driver.version: unknown&#13;
-tcs.semillero.diego.proyDespegar.pageObjects.PageConfigurarVuelo.elegirFechaVuelta(PageConfigurarVuelo.java:133)&#13;
-tcs.semillero.diego.proyDespegar.pageObjects.PageConfigurarVuelo.verificarCheckFechas(PageConfigurarVuelo.java:119)&#13;
-tcs.semillero.diego.proyDespegar.steps.StepConfigurarVuelo.configurar_datos_basicos_del_vuelo(StepConfigurarVuelo.java:26)&#13;
-tcs.semillero.diego.proyDespegar.definitions.DefinitionConfiguracionVuelo.configurar_datos_basicos_del_vuelo(DefinitionConfiguracionVuelo.java:21)&#13;
+tcs.semillero.diego.proyDespegar.pageObjects.PageConfigurarVuelo.seleccionarClaseVuelo(PageConfigurarVuelo.java:120)&#13;
+tcs.semillero.diego.proyDespegar.steps.StepConfigurarVuelo.configurar_datos_basicos_del_vuelo(StepConfigurarVuelo.java:24)&#13;
+tcs.semillero.diego.proyDespegar.definitions.DefinitionConfiguracionVuelo.configurar_datos_basicos_del_vuelo(DefinitionConfiguracionVuelo.java:22)&#13;
 cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
 org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:89)&#13;
 org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
@@ -16,13 +25,4 @@ org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner
 org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
 org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
 org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
-</system-err></testcase><testcase name="Buscar vuelo de ida para 5 personas siendo el pasaje mas caro"><failure message="expected:&lt;4482623&gt; but was:&lt;3814190&gt;" type="junit.framework.AssertionFailedError">expected:&lt;4482623&gt; but was:&lt;3814190&gt;</failure><system-err>expected:&lt;4482623&gt; but was:&lt;3814190&gt;&#13;
-junit.framework.Assert.fail(Assert.java:57)&#13;
-junit.framework.Assert.failNotEquals(Assert.java:329)&#13;
-junit.framework.Assert.assertEquals(Assert.java:78)&#13;
-junit.framework.Assert.assertEquals(Assert.java:234)&#13;
-junit.framework.Assert.assertEquals(Assert.java:241)&#13;
-tcs.semillero.diego.proyDespegar.steps.StepPrecioMasCaro.verficar_el_mayor_precio(StepPrecioMasCaro.java:18)&#13;
-tcs.semillero.diego.proyDespegar.definitions.DefinitionPrecioMasCaro.verficar_el_mayor_precio(DefinitionPrecioMasCaro.java:13)&#13;
-✽.verficar el mayor precio(src/test/resources/features/principal.feature:38)&#13;
 </system-err></testcase></testsuite>

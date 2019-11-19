@@ -55,6 +55,7 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
+            > <a href="87faeb8338abf4d84066d0939013022152a4e6efdb4fbc40c3357a5edf532644.html">Automatizaci&oacute;n De Prueba De P&aacute;gina Despegar</a>
         > Configuracion de datos basicos para la busqueda
         </span>
         </div>
@@ -72,8 +73,11 @@
         <li >
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 18-11-2019 09:44</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 19-11-2019 08:57</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -88,7 +92,7 @@
                             <div>
                                 <h3 class="discreet-story-header">
                                     <i class="fa fa-2x fa-comments-o"></i>
-                                    <span class="story-header-title">Automatización De Prueba De Página Despegar</span>
+                                    <span class="story-header-title">Automatización De Prueba De Página Despegar </span>
                                 </h3>
 
                                 <div class="discreet-requirement-narrative-title">
@@ -120,9 +124,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></span>
                             <span class="test-case-title">
-                                    <span class="failing-color">
+                                    <span class="error-color">
                                     Configuracion de datos basicos para la busqueda
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -139,7 +143,7 @@
     <div class="story-title">
         <h3 class="story-header">Scenario Outline</h3>
 
-        <div class="scenario">Given Ingreso al navegador y a la pagina web<br>When configurar datos basicos del vuelo &lt;ciudadOrigen&gt; &lt;ciudadDestino&gt; &lt;fechaIda&gt; &lt;fechaVuelta&gt; &lt;adultos&gt; &lt;infantes&gt; &lt;checkFecha&gt; &lt;claseVuelo&gt;<br>Then enviar datos</div>
+        <div class="scenario">Given Ingreso al navegador y a la pagina web<br>When configurar datos basicos del vuelo &lt;ciudadOrigen&gt; &lt;ciudadDestino&gt; &lt;tipoVuelo&gt; &lt;fechaIda&gt; &lt;fechaVuelta&gt; &lt;adultos&gt; &lt;infantes&gt; &lt;checkFecha&gt; &lt;claseVuelo&gt;<br>Then enviar datos</div>
 
     </div>
 
@@ -154,6 +158,7 @@
                     <th>#</th>
                         <th>Ciudadorigen</th>
                         <th>Ciudaddestino</th>
+                        <th>Tipovuelo</th>
                         <th>Fechaida</th>
                         <th>Fechavuelta</th>
                         <th>Adultos</th>
@@ -164,22 +169,24 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="test-FAILURE"><a href="#0">1</a></td>
-                            <td class="test-FAILURE"><a href="#0">"Bog"</a>
+                        <td class="test-ERROR"><a href="#0">1</a></td>
+                            <td class="test-ERROR"><a href="#0">"Bog"</a>
                             </td>
-                            <td class="test-FAILURE"><a href="#0">"Lon"</a>
+                            <td class="test-ERROR"><a href="#0">"Lon"</a>
                             </td>
-                            <td class="test-FAILURE"><a href="#0">"19/12/2019"</a>
+                            <td class="test-ERROR"><a href="#0">"ida"</a>
                             </td>
-                            <td class="test-FAILURE"><a href="#0">"10/01/2020"</a>
+                            <td class="test-ERROR"><a href="#0">"19/12/2019"</a>
                             </td>
-                            <td class="test-FAILURE"><a href="#0">2</a>
+                            <td class="test-ERROR"><a href="#0">"10/01/2020"</a>
                             </td>
-                            <td class="test-FAILURE"><a href="#0">3</a>
+                            <td class="test-ERROR"><a href="#0">2</a>
                             </td>
-                            <td class="test-FAILURE"><a href="#0">"no"</a>
+                            <td class="test-ERROR"><a href="#0">3</a>
                             </td>
-                            <td class="test-FAILURE"><a href="#0">"Primera clase"</a>
+                            <td class="test-ERROR"><a href="#0">"no"</a>
+                            </td>
+                            <td class="test-ERROR"><a href="#0">"Primera clase"</a>
                             </td>
                     </tr>
                 </tbody>
@@ -203,12 +210,12 @@
                 <tr class="step-table-separator">
                     <td colspan="5"></td>
                 </tr>
-                <tr class="test-FAILURE">
+                <tr class="test-ERROR">
                     <td width="60" class="step-icon">
                         <a name="0"/>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection0 failure-icon"
+                                <i class="fa fa-plus-square-o imgstepSection0 error-icon"
                                    style="margin-left: 20px; float:left;  padding-right:5px"></i>
                             </a>
                     </td>
@@ -217,16 +224,16 @@
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block;">
                             <span class="top-level-step">
-                                Configuracion de datos basicos para la busqueda #1: {ciudadOrigen="Bog", ciudadDestino="Lon", fechaIda="19/12/2019", fechaVuelta="10/01/2020", adultos=2, infantes=3, checkFecha="no", claseVuelo="Primera clase"}
+                                Configuracion de datos basicos para la busqueda #1: {ciudadOrigen="Bog", ciudadDestino="Lon", tipoVuelo="ida", fechaIda="19/12/2019", fechaVuelta="10/01/2020", adultos=2, infantes=3, checkFecha="no", claseVuelo="Primera clase"}
                             </span>
                             </a>
 
                         </div>
                     </td>
-                        <td width="100" class="FAILURE-text">
+                        <td width="100" class="ERROR-text">
                         </td>
-                    <td width="100"><span class="top-level-step">FAILURE</span></td>
-                    <td width="100"><span class="top-level-step">54.97s</span></td>
+                    <td width="100"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step">40.94s</span></td>
                 </tr>
                     <tr>
                     <td colspan="5">
@@ -249,14 +256,14 @@
                         <td width="100" class="SUCCESS-text">
                                 <a href="4991540fedfbc9dafdd987a06dc771038e826204895f9675fabea0b3378597be_screenshots.html#screenshots?screenshot=0">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="bbdb2a72d39c69be78c3b2d7f4abb286899651a294f350a84069aa6c26681ca6.png"
-                                         href="bbdb2a72d39c69be78c3b2d7f4abb286899651a294f350a84069aa6c26681ca6.png"
+                                    <img src="2d244c0d269da1c9dc9b0857129751c4e3458733219c3abaf4f23bc236af75f2.png"
+                                         href="2d244c0d269da1c9dc9b0857129751c4e3458733219c3abaf4f23bc236af75f2.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
                     <td width="100"><span class="nested-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-step">36.71s</span></td>
+                    <td width="100"><span class="nested-step">27.73s</span></td>
                 </tr>
                 <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
@@ -275,74 +282,74 @@
                         <td width="100" class="SUCCESS-text">
                                 <a href="4991540fedfbc9dafdd987a06dc771038e826204895f9675fabea0b3378597be_screenshots.html#screenshots?screenshot=1">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="bbdb2a72d39c69be78c3b2d7f4abb286899651a294f350a84069aa6c26681ca6.png"
-                                         href="bbdb2a72d39c69be78c3b2d7f4abb286899651a294f350a84069aa6c26681ca6.png"
+                                    <img src="2d244c0d269da1c9dc9b0857129751c4e3458733219c3abaf4f23bc236af75f2.png"
+                                         href="2d244c0d269da1c9dc9b0857129751c4e3458733219c3abaf4f23bc236af75f2.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
                     <td width="100"><span class="nested-group-step">SUCCESS</span></td>
-                    <td width="100"><span class="nested-group-step">35.85s</span></td>
+                    <td width="100"><span class="nested-group-step">26.48s</span></td>
                 </tr>
 
-                <tr class="test-FAILURE">
+                <tr class="test-ERROR">
                     <td width="60" class="step-icon">
                         
                             <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
+                                  class="nested-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
                             <span class="nested-step">
-                                When configurar datos basicos del vuelo "Bog" "Lon" "19/12/2019" "10/01/2020" 2 3 "no" "Primera clase"
+                                When configurar datos basicos del vuelo "Bog" "Lon" "ida" "19/12/2019" "10/01/2020" 2 3 "no" "Primera clase"
                             </span>
 
                         </div>
                     </td>
-                        <td width="100" class="FAILURE-text">
+                        <td width="100" class="ERROR-text">
                                 <a href="4991540fedfbc9dafdd987a06dc771038e826204895f9675fabea0b3378597be_screenshots.html#screenshots?screenshot=2">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="bbdb2a72d39c69be78c3b2d7f4abb286899651a294f350a84069aa6c26681ca6.png"
-                                         href="bbdb2a72d39c69be78c3b2d7f4abb286899651a294f350a84069aa6c26681ca6.png"
+                                    <img src="2d244c0d269da1c9dc9b0857129751c4e3458733219c3abaf4f23bc236af75f2.png"
+                                         href="2d244c0d269da1c9dc9b0857129751c4e3458733219c3abaf4f23bc236af75f2.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
-                    <td width="100"><span class="nested-step">FAILURE</span></td>
-                    <td width="100"><span class="nested-step">18.26s</span></td>
+                    <td width="100"><span class="nested-step">ERROR</span></td>
+                    <td width="100"><span class="nested-step">13.2s</span></td>
                 </tr>
-                <tr class="test-FAILURE">
+                <tr class="test-ERROR">
                     <td width="60" class="step-icon">
                         
                             <span style="margin-left: 60px; margin-right: 5px;"
-                                  class="nested-group-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
+                                  class="nested-group-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
                             <span class="nested-group-step">
-                                Configurar datos basicos del vuelo: Bog, Lon, 19/12/2019, 10/01/2020, 2, 3, no, "Primera clase"
+                                Configurar datos basicos del vuelo: Bog, Lon, ida, 19/12/2019, 10/01/2020, 2, 3, no, Primera clase
                             </span>
 
                         </div>
                     </td>
-                        <td width="100" class="FAILURE-text">
+                        <td width="100" class="ERROR-text">
                                 <a href="4991540fedfbc9dafdd987a06dc771038e826204895f9675fabea0b3378597be_screenshots.html#screenshots?screenshot=3">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="bbdb2a72d39c69be78c3b2d7f4abb286899651a294f350a84069aa6c26681ca6.png"
-                                         href="bbdb2a72d39c69be78c3b2d7f4abb286899651a294f350a84069aa6c26681ca6.png"
+                                    <img src="2d244c0d269da1c9dc9b0857129751c4e3458733219c3abaf4f23bc236af75f2.png"
+                                         href="2d244c0d269da1c9dc9b0857129751c4e3458733219c3abaf4f23bc236af75f2.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
-                    <td width="100"><span class="nested-group-step">FAILURE</span></td>
-                    <td width="100"><span class="nested-group-step">17.87s</span></td>
+                    <td width="100"><span class="nested-group-step">ERROR</span></td>
+                    <td width="100"><span class="nested-group-step">12.36s</span></td>
                 </tr>
-                    <tr class="test-FAILURE">
+                    <tr class="test-ERROR">
                         <td width="40">&nbsp</td>
                         <td width="%" colspan="4" class="error-message-cell">
                             <div class="error-message ellipsis"
-                                 title='Element should be enabled exception: The following error occurred: Expected enabled element was not enabled'>
-                                <pre>Element should be enabled exception: The following error occurred: Expected enabled element was not enabled</pre>
+                                 title='No such element exception: The following error occurred: Cannot locate element with text: rimera clas'>
+                                <pre>No such element exception: The following error occurred: Cannot locate element with text: rimera clas</pre>
                             </div>
                 <div><!-- Stack trace -->
                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
@@ -360,21 +367,19 @@
                                         aria-label="Close"><span aria-hidden="true">&times;</span>
                                 </button>
                                 <h4 class="modal-title" id="stacktraceModalLabel">
-                                net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException
+                                org.openqa.selenium.NoSuchElementException
                                 </h4>
                             </div>
                             <div class="modal-body">
                                     <h5>
-                                        <pre>The following error occurred: Expected enabled element was not enabled</pre>
+                                        <pre>The following error occurred: Cannot locate element with text: rimera clas<br>For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br>Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'<br>System info: host: '50HW013494', ip: '10.104.154.176', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_92'<br>Driver info: driver.version: unknown</pre>
                                     </h5>
-                                tcs.semillero.diego.proyDespegar.pageObjects.PageConfigurarVuelo.elegirFechaVuelta(PageConfigurarVuelo.java
-                                    :133) <br>
-                                tcs.semillero.diego.proyDespegar.pageObjects.PageConfigurarVuelo.verificarCheckFechas(PageConfigurarVuelo.java
-                                    :119) <br>
+                                tcs.semillero.diego.proyDespegar.pageObjects.PageConfigurarVuelo.seleccionarClaseVuelo(PageConfigurarVuelo.java
+                                    :120) <br>
                                 tcs.semillero.diego.proyDespegar.steps.StepConfigurarVuelo.configurar_datos_basicos_del_vuelo(StepConfigurarVuelo.java
-                                    :26) <br>
+                                    :24) <br>
                                 tcs.semillero.diego.proyDespegar.definitions.DefinitionConfiguracionVuelo.configurar_datos_basicos_del_vuelo(DefinitionConfiguracionVuelo.java
-                                    :21) <br>
+                                    :22) <br>
                                 cucumber.runner.Runner.runPickle(Runner.java
                                     :80) <br>
                                 org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java
@@ -390,31 +395,6 @@
                                 org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java
                                     :209) <br>
                             </div>
-
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal"
-                                            aria-label="Close"><span aria-hidden="true">&times;</span>
-                                    </button>
-                                    <h4 class="modal-title" id="stacktraceModalLabel">
-                                    Caused by: org.openqa.selenium.TimeoutException
-                                    </h4>
-                                </div>
-                                <div class="modal-body">
-                                        <pre>Expected condition failed: waiting for PageConfigurarVuelo.btnCalendarioVuelta to be enabled (tried for 5 second(s) with 100 MILLISECONDS interval)</pre>
-                                    <pre>
-                                        tcs.semillero.diego.proyDespegar.pageObjects.PageConfigurarVuelo.elegirFechaVuelta(PageConfigurarVuelo.java :133) <br>
-                                        tcs.semillero.diego.proyDespegar.pageObjects.PageConfigurarVuelo.verificarCheckFechas(PageConfigurarVuelo.java :119) <br>
-                                        tcs.semillero.diego.proyDespegar.steps.StepConfigurarVuelo.configurar_datos_basicos_del_vuelo(StepConfigurarVuelo.java :26) <br>
-                                        tcs.semillero.diego.proyDespegar.definitions.DefinitionConfiguracionVuelo.configurar_datos_basicos_del_vuelo(DefinitionConfiguracionVuelo.java :21) <br>
-                                        cucumber.runner.Runner.runPickle(Runner.java :80) <br>
-                                        org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java :89) <br>
-                                        org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java :41) <br>
-                                        org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java :541) <br>
-                                        org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java :763) <br>
-                                        org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java :463) <br>
-                                        org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java :209) <br>
-                                    </pre>
-                                </div>
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">
@@ -450,10 +430,10 @@
                     </table>
                     </td>
                     <tr>
-                <tr class="test-FAILURE">
+                <tr class="test-ERROR">
                     <td colspan="3"></td>
-                    <td width="100"><span class="top-level-step"><em>FAILURE</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>55.31s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>ERROR</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>48.35s</em></span></td>
                 </tr>
 
             </table>
