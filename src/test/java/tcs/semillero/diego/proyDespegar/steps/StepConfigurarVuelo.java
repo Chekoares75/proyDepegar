@@ -32,12 +32,13 @@ public class StepConfigurarVuelo {
 	@Step
 	public void enviar_datos() throws Exception {
 		objPageConfigurarVuelo.getBtnBuscar().click();
-		Thread.sleep(2000);
+		Thread.sleep(20000);
 	}
 	
 	@Step
 	public void verficar_el_mayor_precio(String resultadoEsperado) throws Exception {
 		Thread.sleep(5000);
+		objPagePrecios.getBtnSeguirColombia().click();
 		objPagePrecios.seleccionarPrecioMayor();
 		resultadoEsperado=resultadoEsperado.substring(1,resultadoEsperado.length()-1);
 		Assert.assertEquals(Integer.parseInt(resultadoEsperado), objPagePrecios.getPrecioMayorNumero());
@@ -46,6 +47,7 @@ public class StepConfigurarVuelo {
 	@Step
 	public void verficar_el_menor_precio(String resultadoEsperado) throws Exception {
 		Thread.sleep(5000);
+		objPagePrecios.getBtnSeguirColombia().click();
 		objPagePrecios.seleccionarPrecioMenor();
 		resultadoEsperado=resultadoEsperado.substring(1,resultadoEsperado.length()-1);
 		Assert.assertEquals((Integer.parseInt(resultadoEsperado)), objPagePrecios.getPrecioMenorNumero());

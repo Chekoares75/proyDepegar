@@ -11,6 +11,10 @@ public class PagePrecios extends PageObject {
 
 	@FindBy(xpath = "//div[contains(@class,'eva-3-nav-slider -white -sm -eva-3-shadow-line-hover airline-matrix-right')]")
 	WebElementFacade btnSiguienteListadoAereolineas;
+	
+	
+	@FindBy(xpath="//*[@id=\"dreck-wrongcountry-modal\"]/div[2]/div/a[2]/em")
+	WebElementFacade btnSeguirColombia;
 
 	int precioMayorNumero = 0;
 	int precioMenorNumero = 99999999;
@@ -160,5 +164,9 @@ public class PagePrecios extends PageObject {
 	}
 	public int getPrecioMenorNumero() {
 		return precioMenorNumero;
+	}
+
+	public WebElementFacade getBtnSeguirColombia() {
+		return btnSeguirColombia;
 	}
 }
