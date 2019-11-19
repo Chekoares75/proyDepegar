@@ -18,4 +18,11 @@ public class StepPrecioMasCaro {
 		objPagePrecioMasCaro.seleccionarPrecioMayor();
 		Assert.assertEquals(4482623, objPagePrecioMasCaro.getPrecioMayorNumero());
 	}
+	
+	@Step
+	public void verficar_el_menor_precio() throws Exception {
+		Thread.sleep(5000);
+		objPagePrecioMasCaro.seleccionarPrecioMenor();
+		Assert.assertEquals(2477241, objPagePrecioMasCaro.getPrecioMenorNumero());
+	}
 }

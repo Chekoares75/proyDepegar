@@ -12,4 +12,9 @@ public class DefinitionPrecioMasCaro {
 	public void verficar_el_mayor_precio() throws Exception {
 		objStepPrecioMasCaro.verficar_el_mayor_precio();
 	}
+	
+	@Then("^verficar el menor precio$")
+	public void verficar_el_menor_precio() throws Exception {
+		objStepPrecioMasCaro.verficar_el_menor_precio();
+	}
 }

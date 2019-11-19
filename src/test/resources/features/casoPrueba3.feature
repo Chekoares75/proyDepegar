@@ -1,6 +1,6 @@
 #Author: your.email@your.domain.com
 @tag
-Feature: Title of your feature
+Feature: Caso de prueba No 3
   I want to use this template for my feature file
 
   @tag1

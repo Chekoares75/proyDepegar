@@ -1,25 +1,15 @@
 #Author: your.email@your.domain.com
 @tag
-Feature: Title of your feature
+Feature: Caso de prueba No 2
   I want to use this template for my feature file
 
   @tag1
-  Scenario: Title of your scenario
-    Given I want to write a step with precondition
-    And some other precondition
-    When I complete action
-    And some other action
-    And yet another action
-    Then I validate the outcomes
-    And check more outcomes
-
-  @tag2
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
+  Scenario Outline: Buscar un vuelo ida y vuelta para 4 adultos 4 infantes y validar el precio mas alto
+    Given Ingreso al navegador y a la pagina web
+    When configurar datos basicos del vuelo <ciudadOrigen> <ciudadDestino> <tipoVuelo> <fechaIda> <fechaVuelta> <adultos> <infantes> <checkFecha> <claseVuelo>
+    And enviar datos
+    Then verficar el menor precio
 
     Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+      | ciudadOrigen | ciudadDestino | tipoVuelo   | fechaIda     | fechaVuelta  | adultos | infantes | checkFecha | claseVuelo      |
+      | "Bog"        | "Lon"         | "idaVuelta" | "19/12/2019" | "10/01/2020" |       4 |        4 | "si"       | "Primera clase" |
